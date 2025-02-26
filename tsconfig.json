@@ -3,7 +3,5 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ],
-  "skipLibCheck": true,  // ✅ Ignore unnecessary type-checking for external libraries
-
+  ]
 }
