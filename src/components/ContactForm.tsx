@@ -4,9 +4,9 @@ import "../styles.css";
 
 const ContactForm: React.FC = () => {
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-
+  const [phone] = useState("");
+  
   const sendMessageToWhatsApp = () => {
     if (!name || !phone || !message) {
       alert("אנא מלא את כל השדות!");
