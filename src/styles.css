@@ -1,0 +1,648 @@
+/* ✅ Set global direction to RTL for Hebrew */
+html, body {
+    direction: rtl;
+    text-align: right;
+    background: black;
+    background: linear-gradient(200deg, #1a1a1a, #ff4400);
+    color: white;
+    margin: 0;
+  }
+  
+  /* ✅ Hero Section */
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 25px 0px 25px;
+    height: 80vh; /* ✅ Centered in the middle of the page */
+    text-align: center;
+  }
+  
+  .hero-container h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .hero-container .highlight {
+    color: #ffcc00; /* ✅ Highlights "Napso Fitness" in gold */
+  }
+  
+  .hero-container p {
+    font-size: 22px;
+    color: #ddd;
+    margin-bottom: 20px;
+  }
+  
+  /* ✅ Modern & Sporty Button */
+  .hero-btn {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #ff4444, #ff8800);
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 68, 68, 0.3);
+  }
+  
+  .hero-btn:hover {
+    background: linear-gradient(90deg, #ff8800, #ff4444);
+    transform: scale(1.05);
+  }
+  
+  /* ✅ VIDEO SHOWCASE */
+  .video-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .swiper {
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* ✅ Video Card Styling */
+  .video-card {
+    width: 100% !important;
+    height: 480px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* ✅ Highlight Active Video */
+  .video-card.active {
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  /* ✅ Side Videos */
+  .video-card:not(.active) {
+    transform: scale(0.85);
+    opacity: 0.7;
+    z-index: 1;
+  }
+  
+  /* ✅ Video Styling */
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  
+  /* ✅ Hover Effect */
+  .video-card:hover {
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* ✅ Navigation Buttons */
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .nav-btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  .prev-btn {
+    right: 5%; /* ✅ Adjusted for RTL */
+  }
+  
+  .next-btn {
+    left: 5%; /* ✅ Adjusted for RTL */
+  }
+  
+  /* ✅ Mobile Responsive Adjustments */
+  @media (max-width: 768px) {
+    .nav-btn {
+      display: none;
+    }
+    .video-card {
+      width: 100% !important;
+      height: 340px;
+    }
+    .swiper {
+      width: 100% !important;
+    }
+  }
+  
+  /* ✅ TRAINING PLANS */
+  .training-plans-container {
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px;
+  }
+  
+  /* ✅ Heading Styles */
+  .training-plans-container h2 {
+    font-size: 32px;
+    color: #ffcc00;
+    margin-bottom: 10px;
+  }
+  
+  /* ✅ Subtitle Text */
+  .training-plans-container p {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 30px;
+  }
+  
+  /* ✅ Plan Grid Layout */
+  .plans-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  
+  /* ✅ Plan Card Styling */
+  .plan-card {
+    background: #000000cf;
+    border-radius: 15px;
+    padding: 20px;
+    width: 320px;
+    max-width: 100%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px;
+  }
+  
+  /* ✅ Plan Card Hover Effect */
+  .plan-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* ✅ Right-aligned Descriptions */
+  .plan-description {
+    text-align: right;
+    font-size: 16px;
+    color: #ccc;
+    margin: 10px 0;
+    min-height: 50px;
+  }
+  
+  /* ✅ Benefit List */
+  .plan-benefits {
+    text-align: right;
+    padding-right: 20px;
+    list-style: none;
+    flex-grow: 1;
+  }
+
+  .plan-benefits-li {
+    margin: 5px 0px 5px 0px;
+  }
+  
+  /* ✅ Plan Price */
+  .plan-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffcc00;
+    margin-top: 10px;
+    min-height: 30px;
+  }
+  
+  /* ✅ Choose Plan Button */
+  .choose-plan-btn {
+    background: #ff4444;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: auto;
+  }
+  
+  .choose-plan-btn:hover {
+    background: #cc0000;
+  }
+  
+  /* ✅ Responsive Training Plans */
+  @media (max-width: 768px) {
+    .plans-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .plan-card {
+      width: 90%;
+      min-height: auto;
+    }
+  }
+  
+  /* ✅ Form Fields */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  /* ✅ Contact Form Button */
+  button {
+    background: red;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background: darkred;
+  }
+/* ✅ About Section - Modern, Sleek & Dynamic */
+.about-container {
+  background: #000000cf; /* Slight transparency */
+  /* backdrop-filter: blur(8px); Frosted glass effect */
+  border-radius: 15px;
+  padding: 50px;
+  text-align: center;
+  max-width: 70%;
+  margin: 60px auto;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(255, 68, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-container:hover {
+  /* transform: scale(1.02); */
+}
+
+/* ✅ Animated Heading */
+.about-heading {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.5);
+}
+
+/* ✅ Main Text */
+.about-text {
+  font-size: 20px;
+  color: #ddd;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* ✅ Highlighted Text */
+.highlight {
+  color: #ff4444;
+  font-weight: bold;
+}
+
+/* ✅ Sections */
+.offerings, .why-me {
+  text-align: right;
+  margin-top: 25px;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+.offerings h3, .why-me h3 {
+  font-size: 24px;
+  color: #ff8800;
+  text-shadow: 1px 1px 8px rgba(255, 136, 0, 0.5);
+}
+
+/* ✅ List Items */
+.offerings ul {
+  list-style: none;
+  padding: 0;
+}
+
+.offerings li {
+  font-size: 18px;
+  color: #ddd;
+  margin: 8px 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.offerings li:hover {
+  transform: translateX(8px);
+  color: #ffcc00;
+}
+
+/* ✅ Call to Action Buttons */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.whatsapp-btn, .consult-btn, .form-btn {
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+  white-space: nowrap;
+  flex: 1;
+  max-width: 220px;
+  text-align: center;
+}
+
+/* ✅ Button Colors */
+.whatsapp-btn {
+  background: #25D366;
+  color: white;
+}
+
+.consult-btn {
+  background: #007bff;
+  color: white;
+}
+
+.form-btn {
+  background: #ff8800;
+  color: white;
+}
+
+.whatsapp-btn:hover, .consult-btn:hover, .form-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ✅ Mobile Optimization */
+@media (max-width: 768px) {
+  .about-container {
+    max-width: 100%;
+    padding: 30px;
+    border-radius: 0px;
+  }
+
+  .about-heading {
+    font-size: 28px;
+  }
+
+  .about-text {
+    font-size: 18px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .whatsapp-btn, .consult-btn, .form-btn {
+    width: 90%;
+    max-width: 280px;
+  }
+}
+
+  
+  /* ✅ טופס יצירת קשר */
+.contact-container {
+    text-align: center;
+    margin: 50px auto; /* ✅ ממורכז באמצע */
+    width: 80%;
+    max-width: 800px;
+    background: #000000cf;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ✅ מוודא שהתוכן ממורכז */
+    line-height: 1.5;
+  }
+  
+  .contact-container h2 {
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 10px;
+  }
+  
+  .contact-container p {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 20px;
+  }
+  
+  /* ✅ סגנון לטופס */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  input, textarea {
+    width: 100%; /* ✅ מונע חורג מהקונטיינר */
+    max-width: 100%; /* ✅ התאמה למסכים קטנים */
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background: #333;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box; /* ✅ מונע חריגה מהקונטיינר */
+  }
+  
+  textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  /* ✅ כפתור שליחה */
+  .send-btn {
+    background: linear-gradient(90deg, #ff4444, #ff8800);
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 68, 68, 0.3);
+    width: 100%;
+    max-width: 300px; /* ✅ מבטיח שהכפתור לא רחב מדי */
+  }
+  
+  .send-btn:hover {
+    background: linear-gradient(90deg, #ff8800, #ff4444);
+    transform: scale(1.05);
+  }
+  
+  /* ✅ התאמה לניידים */
+  @media (max-width: 768px) {
+    .contact-container {
+      width: 80%;
+      padding: 20px;
+    }
+  
+    form {
+      width: 100%;
+    }
+  
+    input, textarea {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .send-btn {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+  
+  /* ✅ Footer Styling */
+.footer {
+    background: #111;
+    color: white;
+    padding: 10px 0px 30px 0px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* ✅ Contact Info */
+  .contact-info, .social-media {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info h3, .social-media h3 {
+    font-size: 22px;
+    color: #ffcc00;
+  }
+  
+  .contact-info p, .social-media p {
+    font-size: 16px;
+    color: #ddd;
+  }
+  
+  .contact-info a, .social-media a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover, .social-media a:hover {
+    color: #ffcc00;
+  }
+  
+  /* ✅ Social Media Icons */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    font-size: 32px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  /* ✅ Social Media Colors */
+  .whatsapp { color: #25D366; }
+  .instagram { color: #E1306C; }
+  .youtube { color: #FF0000; }
+  .linkedin { color: #0077B5; }
+  
+  /* ✅ Hover Effects */
+  .social-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  
+  /* ✅ Footer Bottom */
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  /* ✅ Mobile Responsive */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .social-icons {
+      flex-wrap: wrap;
+    }
+  
+    .social-icon {
+      font-size: 28px;
+    }
+  }
+  
+/* ✅ Hero Logo Styling */
+.hero-logo {
+  max-width: 250px; /* Adjust size */
+  height: auto;
+  margin-bottom: 20px;
+  filter: drop-shadow(0px 4px 10px rgba(255, 165, 0, 0.8)); /* 🔥 Adds a warm glow */
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* ✅ Slight hover effect for interactivity */
+.hero-logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0px 6px 15px rgba(255, 165, 0, 1));
+}
