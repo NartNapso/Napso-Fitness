@@ -73,7 +73,7 @@ const TrainingPlans: React.FC = () => {
                 <li className="plan-benefits-li" key={index}>✅ {benefit}</li>
               ))}
             </ul>
-            <p className="plan-price">💰 {plan.price} לחודש</p>
+            {/* <p className="plan-price">💰 {plan.price} לחודש</p> */}
             <button className="choose-plan-btn" onClick={() => handlePlanSelection(plan.name)}>
               בחר חבילה
             </button>
