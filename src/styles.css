@@ -634,6 +634,7 @@ html, body {
   
 /* ✅ Hero Logo Styling */
 .hero-logo {
+  margin-top: 20px;
   max-width: 250px; /* Adjust size */
   height: auto;
   margin-bottom: 20px;

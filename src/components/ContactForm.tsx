@@ -6,16 +6,16 @@ const ContactForm: React.FC = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [phone] = useState("");
-  
+
   const sendMessageToWhatsApp = () => {
-    if (!name || !phone || !message) {
+    if (!name || !message) {
       alert("אנא מלא את כל השדות!");
       return;
     }
 
     const whatsappNumber = "+972528044482"; // 🔥 עדכן למספר שלך בפורמט בינלאומי (למשל: 972XXXXXXXXX)
     const encodedMessage = encodeURIComponent(
-      `שלום, אני ${name}. מספר הטלפון שלי: ${phone}.\n\n${message}`
+      `שלום, אני ${name}. \n\n${message}`
     );
 
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;

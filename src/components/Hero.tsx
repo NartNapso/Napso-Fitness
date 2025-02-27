@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
         animate={{ opacity: 1, y: 0 }} 
         transition={{ duration: 1, delay: 0.3 }}
       >
-        הדרך שלך לחוסן פיזי ומנטלי מתחיל כאן 💪
+        הדרך שלך לחוסן פיזי ומנטלי מתחילה כאן 💪
       </motion.p>
 
       <motion.p 
