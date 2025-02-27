@@ -5,7 +5,6 @@ import "../styles.css";
 const ContactForm: React.FC = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-  const [phone] = useState("");
 
   const sendMessageToWhatsApp = () => {
     if (!name || !message) {
