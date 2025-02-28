@@ -28,11 +28,11 @@ const About: React.FC = () => {
         transition={{ duration: 1, delay: 0.2 }} 
         className="about-text"
       >
-        אני <strong>נארת נפסו</strong>, מאמן ריצה ואימון פונקציונלי שמשלב{" "}
+        אני <strong>נארת נפסו</strong>, מאמן ריצה שמשלב אימונים היברידיים עם{" "}
         <span className="highlight">סיבולת, כוח ומכשולים. </span>  
         רץ אולטרה מרתונים, משתתף במרוצי מכשולים, ותמיד מחפש לפרוץ גבולות.  
-        אם אתה רוצה להשתפר בריצה, לבנות גוף חזק יותר ולהיות מוכן לכל אתגר –  
-        אני כאן כדי לעזור לך להגיע לשיא שלך.
+        אם אתם רוצים להשתפר בריצה, לבנות גוף חזק יותר, להיכנס לכושר מטורף ולהיות מוכן לכל אתגר –  
+        אני כאן כדי לעזור לכם להשיג כל מטרה.
       </motion.p>
 
       <div className="offerings">
@@ -45,7 +45,7 @@ const About: React.FC = () => {
         </motion.h3>
         <ul>
           <li>✔ אימוני ריצה מותאמים אישית – לכל הרמות.</li>
-          <li>✔ אימוני כוח ואימונים פונקציונליים.</li>
+          <li>✔ אימוני כוח ואימונים פונקציונליים לרצים.</li>
           <li>✔ הכנה למרוצי מכשולים (OCR) – טכניקה, סיבולת וכוח.</li>
         </ul>
       </div>
@@ -72,13 +72,13 @@ const About: React.FC = () => {
         transition={{ duration: 1, delay: 0.5 }}
       >
         <a href="https://wa.me/+972528044482" className="whatsapp-btn">
-          📲 שלח לי הודעה
+          📲 פנייה בוואטסאפ
         </a>
         <a href="https://calendly.com/nartnpso" className="consult-btn">
-          📅 קבע שיחת ייעוץ
+          📅 קביעת שיחת ייעוץ
         </a>
         <a href="#contact-form" onClick={scrollToContactForm} className="form-btn">
-          📩 השאר פרטים
+          📩 השארת פרטים
         </a>
       </motion.div>
     </div>

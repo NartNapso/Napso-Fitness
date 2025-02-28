@@ -30,7 +30,7 @@ const ContactForm: React.FC = () => {
       id="contact-form"
     >
       <h2>📩 צור קשר עכשיו</h2>
-      <p>רוצה להתחיל להתאמן איתי? שלח לי הודעה ואחזור אליך בהקדם!</p>
+      <p>רוצים להתחיל להתאמן איתי? תשאירו לי הודעה ואחזור אליכם בהקדם!</p>
 
       <form onSubmit={(e) => e.preventDefault()}>
         <input

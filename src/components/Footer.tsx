@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
 
         {/* Social Media Links */}
         <div className="social-media">
-          <h3>📲 עקובו אחרי</h3>
+          <h3>📲 עקבו אחרי</h3>
           <div className="social-icons">
             <a href="https://wa.me/+972528044482" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp className="social-icon whatsapp" />
